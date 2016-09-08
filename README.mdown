@@ -7,7 +7,9 @@ This tool uses Python and the ArcPy and NumPy libraries to calculate a Composite
 Baltimore City has 200 Census Tracts containing 25213 vacant homes (range 0 - 462). For each Census Tract, the number of vacant homes in that Census Tract is divided by the total number of vacant homes in all Census Tracts. This ratio is then divided by the max number of vacant homes in a single Census Tract in order to normalize the value between 0 and 1.
 
 v = count of vacant homes in a specific Census Tract
+
 t = count of total vacant homes in all Census Tracts
+
 m = maximum number of vacant homes in a single Census Tract
 
 formula = ( (v / t) / m )
