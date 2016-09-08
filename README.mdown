@@ -1,0 +1,15 @@
+# Composite Index Score Calculator
+
+## What does it do?
+This tool uses Python and the ArcPy and NumPy libraries to calculate a Composite Index Score for a variable in ArcGIS.
+
+## Example of what it does
+Baltimore City has 200 Census Tracts containing 
+
+## Why did I make this?
+I read [this](http://webra.cas.sc.edu/hvri/docs/gtown.pdf) article about Social Vulnerability and hazards. In order to assess Social Vulnerability, they needed to score and normalize the variables. I thought this would be an interesting challenge. They used this method for 14 or 15 variables, all except Mean Home Value.
+
+
+## What are known the problems about this tool?
+I haven't tested this for null values.
+This tool only works for one variable at a time. You could potentially loop through many variables to get multiple variables done in one run but I haven't done that. If you do it, please share!
