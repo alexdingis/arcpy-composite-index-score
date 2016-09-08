@@ -4,10 +4,22 @@
 This tool uses Python and the ArcPy and NumPy libraries to calculate a Composite Index Score for a variable in ArcGIS.
 
 ## Example of what it does
-Baltimore City has 200 Census Tracts containing 
+Baltimore City has 200 Census Tracts containing 25213 vacant homes (range 0 - 462). For each Census Tract, the number of vacant homes in that Census Tract is divided by the total number of vacant homes in all Census Tracts. This ratio is then divided by the max number of vacant homes in a single Census Tract in order to normalize the value between 0 and 1.
+
+v = count of vacant homes in a specific Census Tract
+t = count of total vacant homes in all Census Tracts
+m = maximum number of vacant homes in a single Census Tract
+
+formula = ( (v / t) / m )
+
+e.g. Census Tract 1604 has 381 vacant homes so the formula would be:
+( ( 381 / 25213) / 462 )
+( 0.015111 / 462)
+( 0.824675 )
+
 
 ## Why did I make this?
-I read [this](http://webra.cas.sc.edu/hvri/docs/gtown.pdf) article about Social Vulnerability and hazards. In order to assess Social Vulnerability, they needed to score and normalize the variables. I thought this would be an interesting challenge. They used this method for 14 or 15 variables, all except Mean Home Value.
+I read [this](http://webra.cas.sc.edu/hvri/docs/gtown.pdf) article about Social Vulnerability and hazards. In order to assess Social Vulnerability, they needed to score and normalize the variables. I thought this would be an interesting challenge. They used this method for 14 of  15 variables, all except Mean Home Value.
 
 
 ## What are known the problems about this tool?
