@@ -10,23 +10,29 @@ v = count of vacant homes in a specific Census Tract
 
 t = count of total vacant homes in all Census Tracts
 
-m = maximum number of vacant homes in a single Census Tract
+g = ratio of Census Tract with greatest count of Census Tracts to total count of vacant homes
 
-formula = ( (v / t) / m )
+formula = ( (v / t) / g )
 
 e.g. Census Tract 1604 has 381 vacant homes so the formula would be:
 
-( ( 381 / 25213) / 462 )
+Greatest count of vacant homes in a single Census Tract is Census Tract 1504 with 462 vacant homes.
 
-( 0.015111 / 462)
+g = 462/25213 
 
-( 0.824675 )
+g = 0.018324
+
+( ( 381 / 25213) / 0.018324 )
+
+( 0.015111 / 0.018324)
+
+( 0.824656 ) <--- index score
 
 
 ## Why did I make this?
 I read [this](http://webra.cas.sc.edu/hvri/docs/gtown.pdf) article about Social Vulnerability and hazards. In order to assess Social Vulnerability, they needed to score and normalize the variables. I thought this would be an interesting challenge. They used this method for 14 of  15 variables, all except Mean Home Value.
 
 
-## What are known the problems about this tool?
+## What are known problems about this tool?
 I haven't tested this for null values.
 This tool only works for one variable at a time. You could potentially loop through many variables to get multiple variables done in one run but I haven't done that. If you do it, please share!
